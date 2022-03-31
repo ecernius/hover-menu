@@ -1,0 +1,71 @@
+body{
+background:rgb(27, 27, 27 )   ; 
+text-align: center;
+margin-top: 300px;
+z-index: 10;
+;
+}
+
+
+h1{
+    background-color:rgb(27, 27, 27) ;
+    color: gray;
+    position: relative;
+    margin-top: 60px;
+    transition: 1s;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 4;
+} 
+
+
+h1:hover {
+    color: lightgray;
+    transition-delay: 0.1s;
+    transition: 1s;
+}
+
+h1::before {
+    position: absolute;
+    content: "aa";
+    color: red;
+    background: red;
+    left: 0%;
+     
+    height: 35px;
+    width: 50px;
+    opacity: 0;
+  
+
+
+}
+
+    h1:hover::before {
+        background: red;
+        transform:  translate(300px, 0) ;
+        opacity: 1;
+        transition: 1s;
+        z-index: 1;
+        
+    }
+    h1::after {
+        content: "";
+        color:red;
+        background: red;
+        position: absolute;
+        width: 200px;
+        height: 4px;
+        top:95%;
+        transition: 1s;
+        opacity: 0;
+    
+    }
+    
+    h1:hover::after {
+       transform: translatex(-200px);
+        opacity: 1;
+    
+    
+    
+    }
